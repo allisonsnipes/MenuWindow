@@ -42,7 +42,7 @@ public class Menu {
 		int choice = -1;
 		while (choice < 0 || choice > 2) {
 			try {
-				choice = Integer.parseInt(kb.nextLine());
+				choice = Integer.parseInt(kb.nextLine()); 
 			}
 			catch (NumberFormatException e) {
 				
