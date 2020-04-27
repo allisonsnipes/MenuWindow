@@ -2,9 +2,8 @@ import java.util.Scanner;
 
 public class Menu {
 
-	public static void main(String[] args) { //public static void lets us tests it
+	public static void main(String[] args) { //public static void lets us test it MAIN FUNCTION
 		Menu menu = new Menu(); // creates an instance of the program
-		
 		menu.runMenu();
 	}
 	
@@ -50,11 +49,11 @@ public class Menu {
 				System.out.println("\nInvalid selection please try again");
 			}
 		}
-		return choice; //need this to return the method
+		return choice; //need this to return the method for performed choice
 	}
 	
 	private void performAction(int choice) {
-		switch(choice) {
+		switch(choice) { //different use case of choices
 		case 0:
 			exit = true; //if the user chooses to exit the program
 			System.out.println("\nThank you for using the app!");
@@ -63,15 +62,15 @@ public class Menu {
 			pickColor(); //if user chooses 1 call the method pickColor
 			break;
 		case 2:
-			pickShape();
+			pickShape(); //if user chooses 2 call the method pickShape
 			break;
 		default:
 			System.out.println("\nAn unknown error has occured."); //should never get to here as the logic
 		}
 	}
 	
-	private void pickColor() {
-		int num = (int) (Math.random() * 4); // pick a number 1-3
+	private void pickColor() { //function called if 1 is selected get a random selection
+		int num = (int) (Math.random() * 4); // pick a number 1-3 randomizes it
 		switch(num) {
 			case 0:
 				System.out.println("\nGreen");
@@ -91,7 +90,7 @@ public class Menu {
 		}
 	}
 	
-	private void pickShape() {
+	private void pickShape() { //function called if 2 is selected get a random selection
 		int num = (int) (Math.random() * 4);
 		switch(num) {
 			case 0:
