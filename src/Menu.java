@@ -31,7 +31,7 @@ public class Menu {
 	
 	//used to 
 	private void printMenu(){
-		System.out.println("\nMake a selection:");
+		System.out.println("\nMake a selection of either 1 to get a random color or 2 to get a random shape: ");
 		System.out.println("1)Tell me a color.");
 		System.out.println("2)Tell me a shape.");
 		System.out.println("0)Exit");
@@ -47,7 +47,7 @@ public class Menu {
 				choice = Integer.parseInt(kb.nextLine()); //wrapping to get kb string into integer
 			}
 			catch (NumberFormatException e) {
-				System.out.println("Invalid selection please try again");
+				System.out.println("\nInvalid selection please try again");
 			}
 		}
 		return choice; //need this to return the method
@@ -57,7 +57,7 @@ public class Menu {
 		switch(choice) {
 		case 0:
 			exit = true; //if the user chooses to exit the program
-			System.out.println("Thank you for using the app!");
+			System.out.println("\nThank you for using the app!");
 			break;
 		case 1:
 			pickColor(); //if user chooses 1 call the method pickColor
@@ -66,7 +66,7 @@ public class Menu {
 			pickShape();
 			break;
 		default:
-			System.out.println("An unknown error has occured."); //should never get to here as the logic
+			System.out.println("\nAn unknown error has occured."); //should never get to here as the logic
 		}
 	}
 	
@@ -74,19 +74,19 @@ public class Menu {
 		int num = (int) (Math.random() * 4); // pick a number 1-3
 		switch(num) {
 			case 0:
-				System.out.println("Green");
+				System.out.println("\nGreen");
 				break;
 			case 1:
-				System.out.println("Red");
+				System.out.println("\nRed");
 				break;
 			case 2:
-				System.out.println("Blue");
+				System.out.println("\nBlue");
 				break;
 			case 3:
-				System.out.println("White");
+				System.out.println("\nWhite");
 				break;
 			default:
-				System.out.println("No selection made."); //should never occur due to logic
+				System.out.println("\nNo selection made."); //should never occur due to logic
 				break;
 		}
 	}
@@ -95,19 +95,19 @@ public class Menu {
 		int num = (int) (Math.random() * 4);
 		switch(num) {
 			case 0:
-				System.out.println("Square");
+				System.out.println("\nSquare");
 				break;
 			case 1:
-				System.out.println("Triangle");
+				System.out.println("\nTriangle");
 				break;
 			case 2:
-				System.out.println("Circle");
+				System.out.println("\nCircle");
 				break;
 			case 3:
-				System.out.println("Hexagon");
+				System.out.println("\nHexagon");
 				break;
 			default:
-				System.out.println("No selection made."); //should never occur due to logic
+				System.out.println("\nNo selection made."); //should never occur due to logic
 				break;
 		}	
 	}
